@@ -81,8 +81,8 @@ def index():
         email = form.email.data
         user_exists = db.session.execute(db.select(Users).where(Users.email==email)).scalar()
         if user_exists:
-            flash("User with these credentials already exists. Please check your inbox")
-            return redirect('/')
+            flash("User with these credentials already exists. Please check your inbox",'info')
+            return redirect('/#signin')
         else:
             new_user = Users(
                 first_name = form.first_name.data,
@@ -92,7 +92,8 @@ def index():
             )
             db.session.add(new_user)
             db.session.commit()
-            flash('You have successfully registered. Please check your inbox for more details.')
+            flash('You have successfully registered. Please check your inbox for more details.','info')
+            return redirect('/#signin')
 
     return render_template('index.html', form=form)
 

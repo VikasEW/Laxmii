@@ -1,4 +1,4 @@
-{% from 'bootstrap5/utils.html' import render_icon %}
+{% from 'bootstrap5/utils.html' import render_icon, render_messages %}
 {% from 'bootstrap5/form.html' import render_field %}
 <!doctype html>
 <html class="h-100" lang="en">
@@ -73,7 +73,7 @@
 
 </head>
 
-<body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
+<body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll" style="max-width: 100%; overflow-x: hidden;">
 
   <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
     <div class="container">
@@ -83,7 +83,7 @@
     </div>
   </nav>
 
-  <main>
+  <main class="w-100">
     <div class="w-100 overflow-hidden position-relative bg-black text-white" data-aos="fade">
       <div class="position-absolute w-100 h-100 bg-black opacity-75 top-0 start-0"></div>
       <div class="container py-vh-4 position-relative mt-5 px-vw-5 text-center">
@@ -240,8 +240,9 @@
             <h2 class="display-4">You get all our knowledge for one simple price</h2>
           </div>
           <div class="col-12 col-lg-7 bg-dark rounded-5 py-vh-3 text-right my-5" data-aos="zoom-in-up">
-            <div class="form-signin container">        
-              <form class="w-75 m-auto" method="post" novalidate="true" enctype="application/x-www-form-urlencoded">
+            <div class="form-signin container"> 
+              {{ render_messages() }}       
+              <form class="w-75 m-auto" method="post" enctype="application/x-www-form-urlencoded">
                 {{ form.csrf_token() }}
                 {{ render_field(form.first_name, class='form-control-lg bg-gray-800 border-dark') }}
                 {{ render_field(form.last_name, class='form-control-lg bg-gray-800 border-dark') }}
@@ -285,7 +286,7 @@
               <p class="h4 fw-lighter text-secondary">
                 access to financial reports and insights
               </p>
-              <h2 class="display-huge fw-bolder border-top border-secondary pt-5 mt-5" data-aos="zoom-in-left">£8.5k +</h2>
+              <h2 class="display-huge fw-bolder border-top border-secondary pt-5 mt-5" data-aos="zoom-in-left">£8.5k+</h2>
               <p class="h4 fw-lighter text-secondary">
                 saved annually on bookkeeping and taxes
               </p>
