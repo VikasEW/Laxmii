@@ -15,7 +15,7 @@ class Users(db.Model):
     first_name: Mapped[str] = mapped_column(String(250),nullable=False)
     last_name: Mapped[str] = mapped_column(String(250), nullable=True)
     email: Mapped[str] = mapped_column(String(250), nullable=False)
-    query: Mapped[str] = mapped_column(Text(1000), nullable=True)
+    query: Mapped[str] = mapped_column(Text, nullable=True)
     created_on: Mapped[datetime] = mapped_column(DateTime, nullable=False, default=func.now())
 
     def __str__(self) -> str:

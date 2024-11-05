@@ -82,3 +82,8 @@ div.invalid-feedback {
   font-size: small;
   font-weight: bold;
 }
+
+html body {
+  overflow-x: hidden !important;
+  width: 100vw !important;
+}
