@@ -20,6 +20,11 @@ app.secret_key = os.getenv('SECRET_KEY') or 'top-secret'
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI') or 'sqlite:///' + os.path.join(basedir,'app.db')
 app.config['BASIC_AUTH_USERNAME'] = 'john'
 app.config['BASIC_AUTH_PASSWORD'] = 'doe'
+app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
+    'pool_size':10,
+    'pool_recycle':60,
+    'pool_pre_ping':True
+}
 
 Bootstrap5(app)
 db.init_app(app)
