@@ -52,3 +52,7 @@
       /* color: chocolate !important; */
       border-bottom: 2px solid white !important;
     }
+
+    .btn-custom:hover {
+      color: #fff !important;
+    }
