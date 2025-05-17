@@ -1,101 +1,130 @@
-{% from 'bootstrap5/utils.html' import render_icon, render_messages %}
-{% from 'bootstrap5/form.html' import render_field %}
+<!--{% from 'bootstrap5/utils.html' import render_icon, render_messages %}-->
+<!--{% from 'bootstrap5/form.html' import render_field %}-->
 <!doctype html>
 <html class="h-100" lang="en">
 
+<!-- Head -->
+
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
   <meta name="description" content="A well made and handcrafted Bootstrap 5 template">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='img/logo2.png')}}">
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/logo2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/img/logo2">
+  <link rel="icon" type="image/png" sizes="16x16" href="../static/img/logo2.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../static/img/logo2.png">
+ <!--<link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='img/logo2.png')}}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='img/logo2')}}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='img/logo2.png')}}">
-  <link rel="icon" type="image/png" sizes="96x96" href="{{url_for('static', filename='img/logo2.png')}}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{url_for('static', filename='img/logo2.png')}}">-->
   <meta name="author" content="Holger Koenemann">
   <meta name="generator" content="Eleventy v2.0.0">
   <meta name="HandheldFriendly" content="true">
   <title>Laxmii App</title>
-  <link rel="stylesheet" href="{{url_for('static', filename='css/button.css')}}">
-  <link rel="stylesheet" href="{{url_for('static', filename='css/theme.min.css')}}">
-
-  <style>
-    /* inter-300 - latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: local(''),
-        url('../static/fonts/inter-v12-latin-300.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/inter-v12-latin-300.woff') format('woff');
-      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-
-    /* inter-400 - latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: local(''),
-        url('../static/fonts/inter-v12-latin-regular.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/inter-v12-latin-regular.woff') format('woff');
-      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: local(''),
-        url('../static/fonts/inter-v12-latin-500.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/inter-v12-latin-500.woff') format('woff');
-      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: local(''),
-        url('../static/fonts/inter-v12-latin-700.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../static/fonts/inter-v12-latin-700.woff') format('woff');
-      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-  </style>
-
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="../static/css/button.css">
+  <link rel="stylesheet" href="../static/css/theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/bootstrap-icons.min.css">
+  <!--<link rel="stylesheet" href="{{url_for('static', filename='css/button.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/theme.min.css')}}">-->
+  <link rel="stylesheet" type="text/css" href="main.css"/>
 
 </head>
 
+<!-- Body -->
+
 <body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll" style="max-width: 100%; overflow-x: hidden;">
 
-  <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
+  <!-- Header -->
+
+  <nav id="navScroll" class="navbar navbar-expand-sm navbar-dark bg-black fixed-top px-vw-5 pt-2 pb-2 border-bottom border-dark" tabindex="0">
     <div class="container">
-      <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="#">
-        <img style="max-height: 2em;" src="{{url_for('static', filename='img/logo.png')}}" alt="Logo">
+      
+      <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center order-2 order-md-1" href="#">
+        <img style="max-height: 2em;" src="../static/img/logo.png" alt="Logo">
+        <!--<img style="max-height: 2em;" src="{{url_for('static', filename='img/logo.png')}}" alt="Logo">-->
       </a>
+      
+      <button class="navbar-toggler order-1 order-md-2" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse order-2" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active mx-0 px-3 text-nowrap" href="index.html"><small>Home</small></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-0 px-3 text-nowrap" href="features.html"><small>Features</small></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-0 px-3 text-nowrap" href="pricing.html"><small>Pricing</small></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-0 px-3 text-nowrap" href="competitor.html"><small>Competitors</small></a>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </nav>
 
-  <main style="max-width: 100%; overflow-x: hidden;">
-    <div class="w-100 overflow-hidden position-relative bg-black text-white" data-aos="fade">
+  <!-- Main -->
+
+  <main style="max-width: 100%; overflow: hidden;">
+
+    <div class="w-100 pt-vh-5 pb-vh-1 overflow-hidden position-relative bg-black text-white" data-aos="fade">
       <div class="position-absolute w-100 h-100 bg-black opacity-75 top-0 start-0"></div>
-      <div class="container py-vh-4 position-relative mt-5 px-vw-5 text-center">
-        <div class="row d-flex align-items-center justify-content-center py-vh-5">
+      <div class="container py-vh-5 position-relative mt-5 px-vw-5 text-center"><br><br>
+        
+        <div class="row d-flex align-items-center justify-content-center">
+         
+          <!-- Mission Statement-->
+
           <div class="col-12 col-xl-10">
             <span class="h5 text-secondary fw-lighter">Our Mission</span>
-            <h1 class="display-huge mt-3 mb-3 lh-1">Empowering Financial Freedom</h1>
+            <!--<h1 class="display-huge mt-3 mb-5 lh-1">Empowering Financial Freedom</h1>-->
+            <h1 class="display-huge mt-3 mb-4 lh-1">Master Your Money. Build Your Hustle</h1>
           </div>
-          <div class="col-12 col-xl-8">
-            <p class="lead text-secondary">LAXMII exists to offer the tools, knowledge, and support to empower anyone to understand, grow, and master their wealth.</p>
+
+          <div class="container mb-3 text-center lead text-secondary">
+            <!--<p>At LAXMII, our mission is simple: to give hustlers, creators, and business owners full control of their finances—without needing to be financial experts. We’re building the most practical, AI-powered financial app for modern entrepreneurs who want to save smarter, grow faster, and never miss a beat with their money.</p>-->
+            <p>Track income, manage cash flow, and never miss a financial beat - LAXMII gives you full control.</p>
           </div>
-          <div class="col-12 text-center">
+
+          <!-- Market Buttons -->
+          
+          <div class="container">
+          <center> 
+
+            <!-- App Store button -->
+
+            <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn apple-btn" role="button">
+              <span class="market-button-subtitle">Download on the</span>
+              <span class="market-button-title">App Store</span>
+            </a>
+
+            <!-- Google Play button -->
+
+            <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn google-btn" role="button">
+              <span class="market-button-subtitle">Download on the</span>
+              <span class="market-button-title">Google Play</span>
+            </a>
+            
+          </center> 
+          </div>
+
+          <!-- Sign Up -->
+
+          <!--<div class="col-12 text-center">
             <div id="container">
               <a href="#signin" style="text-decoration: none;">
               <button class="learn-more">
@@ -106,367 +135,220 @@
               </button>
             </a>
             </div>
-          </div>
+          </div>-->
+
         </div>
       </div>
-
     </div>
+
+    <!-- App Screenshots -->
 
     <div class="w-100 position-relative bg-black text-white bg-cover d-flex align-items-center">
-      <div class="container-fluid px-vw-5">
-        <div class="position-absolute w-100 h-50 bg-dark bottom-0 start-0"></div>
-        <div class="row d-flex align-items-center position-relative justify-content-center px-0 g-5">
-          <div class="col-12 col-lg-6">
-            <img src="{{url_for('static', filename='img/webp/abstract18.webp')}}" width="2280" height="1732"
-              alt="abstract image" class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up">
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <img src="{{url_for('static', filename='img/webp/abstract6.webp')}}" width="1116" height="1578"
-              alt="abstract image" class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up"
-              data-aos-duration="2000">
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <img src="{{url_for('static', filename='img/webp/abstract9.webp')}}" width="1116" height="848"
-              alt="abstract image" class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up"
-              data-aos-duration="3000">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-dark">
-      <div class="container px-vw-5 py-vh-5">
-        <div class="row d-flex align-items-center">
-          <div class="col-12 col-lg-7 text-lg-end" data-aos="fade-right">
-            <h2 class="display-4">LAXMII
-              <h3 class="display-5 text-secondary">
-                The most user-friendly financial app designed to help you manage your money, track expenses, and plan your future effortlessly
-              </h3>
-            </h2>
-          </div>
-          <div class="col-12 col-lg-5" data-aos="fade-left">
-            <h3 class="pt-5 fw-bolder">Your Personal Financial Assistant</h3>
-            <p class="text-secondary mobileHidden">Receive tailored advice based on your unique financial situation.
-              LAXMII analyzes your past financial behavior and forecasts trends, giving you a clear view of your future financial health. 
-              Whether it’s saving, investing, or spending, LAXMII’s AI provides recommendations designed just for you.
-            </p>
-            <h3 class="border-top border-secondary pt-5 mt-5 fw-bolder">Bookkeeping & Automation</h3>
-            <p class="text-secondary mobileHidden">
-              Automation takes the guesswork out of managing finances - optimizing efficiency and accuracy.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-black py-vh-3">
-      <div class="container bg-black px-vw-5 py-vh-3 rounded-5 shadow">
-
-        <div class="row gx-5">
-          <div class="col-12 col-md-6">
-            <div class="card bg-transparent mb-5" data-aos="zoom-in-up">
-              <div class="bg-dark shadow rounded-5 p-0">
-                <img src="{{url_for('static', filename='img/webp/abstract3.webp')}}" width="582" height="327" alt="abstract image"
-                  class="img-fluid rounded-5 no-bottom-radius" loading="lazy">
-                <div class="p-5">
-                  <h2 class="fw-lighter">Building a Lasting Legacy of Financial Literacy and Independence</h2>
-                  <p class="pb-4 text-secondary mobileHidden">Financial well-being often isn’t taught, leaving generations in cycles of poor money management or insecurity. LAXMII stands for changing that cycle—giving people a legacy of financial education that they can pass on. Users won’t just improve their own lives; they’ll be setting up future generations to be financially literate and independent.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card bg-transparent" data-aos="zoom-in-up">
-              <div class="bg-dark shadow rounded-5 p-0">
-                <img src="{{url_for('static', filename='img/webp/abstract2.webp')}}" width="582" height="442" alt="abstract image"
-                  class="img-fluid rounded-5 no-bottom-radius" loading="lazy">
-                <div class="p-5">
-                  <h2 class="fw-lighter">Safe and Secure</h2>
-                  <p class="pb-4 text-secondary mobileHidden">With built-in AI security measures, your financial data remains encrypted and safe, while AI continuously monitors for potential threats or anomalies.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="p-5 pt-0 mt-5" data-aos="fade">
-              <span class="h5 text-secondary fw-lighter">What we believe</span>
-              <h2 class="display-4">A Vision for Self-Empowerment Beyond Finances</h2>
-            </div>
-            <div class="card bg-transparent mb-5 mt-5" data-aos="zoom-in-up">
-              <div class="bg-dark shadow rounded-5 p-0">
-                <img src="{{url_for('static', filename='img/webp/abstract17.webp')}}" width="582" height="390" alt="abstract image"
-                  class="img-fluid rounded-5 no-bottom-radius" loading="lazy">
-                <div class="p-5">
-                  <h2 class="fw-lighter">Where Community Meets Exclusivity</h2>
-                  <p class="pb-4 text-secondary mobileHidden">Financial advice can be murky, with hidden fees and complex terms. But LAXMII’s purpose is to bring transparency and integrity into the equation. By being upfront, honest, and accessible, LAXMII creates a sense of community and trust with its users. It’s about building a financial service people feel safe with, where their growth is prioritized and respected</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card bg-transparent" data-aos="zoom-in-up">
-              <div class="bg-dark shadow rounded-5 p-0">
-                <img src="{{url_for('static', filename='img/webp/abstract4.webp')}}" width="582" height="327" alt="abstract image"
-                  class="img-fluid rounded-5 no-bottom-radius" loading="lazy">
-                <div class="p-5">
-                  <h2 class="fw-lighter">User driven app</h2>
-                  <p class="pb-4 text-secondary mobileHidden">Our sleek, intuitive dashboard offers an easy-to-use interface, giving you access to all your financial data in one place. Navigate through your transactions, insights, and reports effortlessly.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-    <div class="bg-dark position-relative">
-      <div class="container px-vw-5 py-vh-5">
-        <div class="row d-flex align-items-center">
-
-          <div class="col-12 col-lg-7">
-            <img class="img-fluid rounded-5 mb-n5 shadow" src="{{url_for('static', filename='img/webp/person9.webp')}}" width="512" height="512"
-              alt="a nice person" loading="lazy" data-aos="zoom-in-right">
-            <img class="img-fluid rounded-5 ms-5 mb-n5 shadow" src="{{url_for('static', filename='img/webp/person11.webp')}}" width="512" height="512"
-              alt="another nice person" loading="lazy" data-aos="zoom-in-up">
-          </div>
-          <div class="col-12 col-lg-5 bg-dark rounded-5 py-5" data-aos="fade">
-            <span class="h5 text-secondary fw-lighter pt-2">Do you want to unlock your potential?</span>
-            <h2 class="display-4">Join us on this journey toward freedom and possibility!</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-black" id="signin">
-      <div class="container px-vw-5 py-vh-5">
-        <div class="row d-flex align-items-center">
-          <div class="col-12 col-lg-5 text-center text-lg-end" data-aos="zoom-in-right">
-            <span class="h5 text-secondary fw-lighter">What we charge</span>
-            <h2 class="display-4">You get all our knowledge for one simple price</h2>
-          </div>
-          <div class="col-12 col-lg-7 bg-dark rounded-5 py-vh-3 text-right my-5" data-aos="zoom-in-up">
-            <div class="form-signin container"> 
-              {{ render_messages() }}       
-              <form class="w-75 m-auto" method="post" enctype="application/x-www-form-urlencoded">
-                {{ form.csrf_token() }}
-                {{ render_field(form.first_name, class='form-control-lg bg-gray-800 border-dark') }}
-                {{ render_field(form.last_name, class='form-control-lg bg-gray-800 border-dark') }}
-                {{ render_field(form.email, class='form-control-lg bg-gray-800 border-dark') }}
-                {{ render_field(form.query, class='form-control-lg bg-gray-800 border-dark') }}
-                {{ render_field(form.submit, button_style='light', class='btn-xl') }}
-            </form>
-          </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="container-fluid px-vw-5 position-relative" data-aos="fade">
-      <div class="position-absolute w-100 h-50 bg-black top-0 start-0"></div>
-      <div class="position-relative py-vh-5 bg-cover bg-center rounded-5"
-        style="background-image: url(../static/img/webp/abstract12.webp)">
-        <div class="container bg-black px-vw-5 py-vh-3 rounded-5 shadow">
-          <div class="row d-flex align-items-center">
-            <div class="col-6 d-flex align-items-center bg-dark shadow rounded-5 p-0" data-aos="zoom-in-up">
-              <div class="row d-flex justify-content-center">
-                <div class="col-12">
-                  <img src="{{url_for('static', filename='img/webp/person103.webp')}}" width="684" height="457" alt="our CEO with some nice numbers" class="img-fluid rounded-5" loading="lazy">
-                </div>
-
-                <div class="col-12 col-lg-10 col-xl-8 text-center my-5">
-                  <h2 class="display-2 lead border-bottom pb-4 border-secondary">“AI will be the most transformative technology since electricity.”</h2>
-                  <p class="text-secondary text-center">Eric Schmidt</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-5 offset-1">
-              <span class="h5 text-secondary fw-lighter">The numbers</span>
-              <h2 class="display-huge fw-bolder" data-aos="zoom-in-left">240+</h2>
-              <p class="h4 fw-lighter text-secondary">
-                hours freed up every year.
-              </p>
-
-              <h2 class="display-huge fw-bolder border-top border-secondary pt-5 mt-5" data-aos="zoom-in-left">24x7
-              </h2>
-              <p class="h4 fw-lighter text-secondary">
-                access to financial reports and insights
-              </p>
-              <h2 class="display-huge fw-bolder border-top border-secondary pt-5 mt-5" data-aos="zoom-in-left">£8.5k+</h2>
-              <p class="h4 fw-lighter text-secondary">
-                saved annually on bookkeeping and taxes
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="bg-dark py-vh-5">
       <div class="container px-vw-5">
-        <div class="row d-flex gx-5 align-items-center">
-          <div class="col-12 col-lg-6">
-            <div class="rounded-5 bg-black p-5 shadow" data-aos="zoom-in-right">
-              <div class="fs-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-              </div>
-              <p class="text-secondary lead">“As a freelancer, tracking finances can be overwhelming, but LAXMII has been a total lifesaver. The app’s predictive financial insights are spot-on and help me budget around times when work is slower. I feel like I’m in control of my money, and the intuitive design makes everything so easy to find. Highly recommended for anyone juggling multiple streams of income!”</p>
-              <div class="d-flex justify-content-start align-items-center border-top border-secondary pt-3">
-                <img src="{{url_for('static', filename='img/webp/person14.webp')}}" width="96" height="96" class="rounded-circle me-3" alt="a nice person"
-                  data-aos="fade" loading="lazy">
-                <div>
-                  <span class="h6 fw-5">Idris Farooqui</span><br>
-                  <small class="text-secondary">Freelancer and Entrepeneur</small>
-                </div>
-              </div>
-            </div>
-            <div class="rounded-5 bg-black p-5 shadow mt-5" data-aos="zoom-in-right">
-              <div class="fs-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-half" viewBox="0 0 16 16">
-                  <path
-                    d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z" />
-                </svg>
-
-              </div>
-              <p class="text-secondary lead">“LAXMII is the financial tool I didn’t know I needed. I initially downloaded it for the tax optimization, but it’s the real-time insights and recommendations that have made the biggest difference. I’m now much more proactive with my money, and I finally feel like I’m maximizing my savings and investments. Couldn’t imagine managing my finances without it anymore!”</p>
-              <div class="d-flex justify-content-start align-items-center border-top border-secondary pt-3">
-                <img src="{{url_for('static', filename='img/webp/person13.webp')}}" width="96" height="96" class="rounded-circle me-3" alt="a nice person"
-                  data-aos="fade" loading="lazy">
-                <div>
-                  <span class="h6 fw-5">Rohan Thakur</span><br>
-                  <small class="text-secondary">Graduate Engineer</small>
-                </div>
-              </div>
-            </div>
-
+        <div class="position-absolute w-100 h-50 bg-black bottom-0 start-0"></div>
+        <!--<div class="position-absolute w-100 h-50 bg-dark bottom-0 start-0"></div>-->
+        <div class="row d-flex align-items-center position-relative justify-content-center px-0 g-0">
+          <div class="col-12 col-md-6 col-lg-3">
+            <img src="../static/img/webp/ss_home1.webp" width="1116" height="1578"
+              alt="abstract image" class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up">
+            <!--<img src="{{url_for('static', filename='img/webp/abstract18.webp')}}" width="2280" height="1732"
+              alt="abstract image" class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up">-->
           </div>
-          <div class="col-12 col-lg-6">
-            <div class="p-5 pt-0" data-aos="fade">
-              <span class="h5 text-secondary fw-lighter">What others have to say</span>
-              <h2 class="display-4">“Using LAXMII has completely changed the way I approach my finances!”</h2>
-            </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img src="../static/img/webp/ss_home2.webp" width="1116" height="1578"
+              alt="abstract image" class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up" data-aos-duration="2000">
+            <!--<img src="{{url_for('static', filename='img/webp/abstract6.webp')}}" width="1116" height="1578"
+             alt="abstract image" class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up" data-aos-duration="2000">-->
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img src="../static/img/webp/ss_home3.webp" width="1116" height="848"
+              alt="abstract image" class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up" data-aos-duration="3000">
+            <!--<img src="{{url_for('static', filename='img/webp/abstract9.webp')}}" width="1116" height="848"
+              alt="abstract image" class="img-fluid position-relative rounded-5 shadow" data-aos="fade-up" data-aos-duration="3000">-->
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- What We Do -->
+
+    <div class="bg-black">
+      <div class="container px-vw-5 pb-4 py-vh-5">
+        <div class="row d-flex align-items-center">
+          <div class="col-12 col-lg-5 text-lg-end" data-aos="fade-right">
+            <h2 class="display-4">What We Do</h2>
+            <!--<h5 class="display-6 text-secondary">Our mission is simple: to give hustlers, creators, and business owners full control of their finances—without needing to be financial experts. We’re building the most practical, AI-powered financial app for modern entrepreneurs who want to save smarter, grow faster, and never miss a beat with their money.</h5>-->
+            <hs class="text-secondary">At LAXMII, our mission is simple: to give hustlers, creators, and business owners full control of their finances—without needing to be financial experts. We’re building the most practical, AI-powered financial app for modern entrepreneurs who want to save smarter, grow faster, and never miss a beat with their money.</hs>
+          </div>
+          <div class="col-12 col-lg-7" data-aos="fade-left">
+            <h3 class="pt-5 fw-bolder">Your Personal Financial Assistant</h3>
+            <p class="text-secondary">We’ve combined AI, automation, and simple design to build a finance app that actually works for you—not just your accountant. Whether you're managing income, tracking mileage, or sending quotes on the go, LAXMII is your smart financial co-pilot.</p>
+            <h3 class="border-top border-secondary pt-5 mt-5 fw-bolder">Our goal?</h3>
+            <p class="text-secondary">Replace stress with confidence, spreadsheets with insights, and confusion with clarity.</p>
+          </div>
+        </div>
+     </div>
     </div>
 
   </main>
 
+  <!-- Footer -->
+
   <footer class="bg-black border-top border-dark">
-    <div class="container py-vh-2 text-secondary fw-lighter">
+    <div class="container text-secondary fw-lighter">
       <div class="row">
-        <div class="col-12 col-lg-5 py-4 text-center text-lg-start">
-          <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="index.html">
-            <img style="max-height: 4em;" src="{{url_for('static', filename='img/logo2.png')}}" alt="Logo">
+
+        <div class="col-12 col-md-auto py-4 text-center text-lg-start">
+          <a class="fs-4" href="index.html">
+            <img style="max-height: 4em;" src="../static/img/logo2.png" alt="Logo">
           </a>
+        </div>
+              
+        <div class="col ms-5 ps-5 text-center">
+        <div class="container text-secondary fw-lighter">
+        <div class="row d-inline-flex gap-3">
+
+        <!-- Linkedin Social Media Icon -->
+         
+        <div class="col px-0 pt-5">
+          <a href="https://www.linkedin.com/in/laxmii-app-1253b9332/" target="_blank">
+            <button type="button" class="btn btn-primary px-3 pt-0 pb-1 rounded-2 text-white" style="background-color: #0082ca">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+              </svg>
+            </button>
+          </a>
+        </div>
+
+        <!-- Email Social Media Icon -->
+         
+        <div class="col px-0 pt-5">
+          <a href="mailto:enquiries@laxmiiapp.com" target="_blank">
+            <button type="button" class="btn btn-primary px-3 pt-0 pb-1 rounded-2 text-white" style="background-color: #007bff">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+              </svg>
+            </button>
+          </a>
+        </div>
+
+        <!-- Instagram Social Media Icon -->
+         
+        <div class="col px-0 pt-5">
+          <a href="https://www.instagram.com/laxmiiapp/" target="_blank">
+            <button type="button" class="btn btn-primary px-3 pt-0 pb-1 rounded-2 text-white" style="background-color: #ac2bac">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg>
+            </button>
+          </a>
+        </div>
+
+        <!-- Watsapp Social Media Icon -->
+         
+        <div class="col px-0 pt-5">
+          <a href="#!" target="_blank">
+            <button type="button" class="btn btn-primary px-3 pt-0 pb-1 rounded-2 text-white" style="background-color: #25d366">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-text" viewBox="0 0 16 16">
+                <path d="M2.678 11.894a1 1 0 0 1 .287.801 11 11 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8 8 0 0 0 8 14c3.996 0 7-2.807 7-6s-3.004-6-7-6-7 2.808-7 6c0 1.468.617 2.83 1.678 3.894m-.493 3.905a22 22 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a10 10 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105"/>
+                <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8m0 2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </button>
+          </a>
+        </div>
+
+        <!-- Privacy Policy -->
+
+        <div class="col px-0">
+          <a target="_blank" href="privacy.pdf" style="text-decoration: none;">
+            <div class="card bg-black text-white">
+                <div class="card-body link-fancy-light link-fancy">
+                  <div class="small text-center mt-4 pb-1 text-white">Privacy</div>
+                </div> 
+            </div>
+          </a> 
+        </div>
+
+        <!-- Terms & Condition -->
+
+        <div class="col px-0">
+          <a target="_blank" href="t&c.pdf" style="text-decoration: none;">
+            <div class="card bg-black text-white">
+                <div class="card-body link-fancy-light link-fancy">   
+                    <div class="small text-center mt-4 pb-1 text-white">T&C</div>             
+                </div>
+            </div>
+          </a> 
+        </div>
 
         </div>
-        <div class="col border-end border-dark">
+        </div>
+        </div>
+
+        <!--<div class="col border-end border-dark">
           <a target="_blank" href="https://www.linkedin.com/in/laxmii-app-1253b9332/" style="text-decoration: none;">
-            <div class="card bg-black text-white py-4 h-100">
-                <div class="card-body link-fancy-light link-fancy text-center">
-                    {{ render_icon('linkedin', color='primary', size='2em') }}
+            <div class="card bg-black text-white">-->
+            <!--<div class="card bg-black text-white py-4 h-100">-->
+                <!--<div class="card-body">-->
+                <!--<div class="card-body link-fancy-light link-fancy text-center">-->
+                  <!--<svg class="bi text-primary" width="2em" height="2em" fill="currentColor">
+                    <use xlink:href="/bootstrap/static/icons/bootstrap-icons.svg#linkedin"/>
+                  </svg>-->
+                    <!--{{ render_icon('linkedin', color='primary', size='2em') }}
                     <div class="small text-center mt-3 text-black-50">LinkedIn</div>
-                    <br>                                             
-                </div> 
+                    <br>-->                                       
+                <!--</div> 
+                <div class="card-footer link-fancy-light link-fancy text-center">
+                  <div class="small text-center mt-2 pb-2 text-white">LinkedIn</div>
+                </div>
             </div>
         </a>          
         </div>
         <div class="col border-end border-dark">
           <a target="_blank" href="mailto:enquiries@laxmiiapp.com" style="text-decoration: none;">
-            <div class="card bg-black text-white py-4 h-100">
-                <div class="card-body link-fancy-light link-fancy text-center">
-                    {{ render_icon('envelope-at', color='primary', size='2em') }}
+            <div class="card bg-black text-white">-->
+            <!--<div class="card bg-black text-white py-4 h-100">-->
+                <!--<div class="card-body">-->
+                <!--<div class="card-body link-fancy-light link-fancy text-center">-->
+                  <!--<svg class="bi text-primary" width="2em" height="2em" fill="currentColor">
+                    <use xlink:href="/bootstrap/static/icons/bootstrap-icons.svg#envelope-at"/>
+                  </svg>-->
+                    <!--{{ render_icon('envelope-at', color='primary', size='2em') }}
                     <div class="small text-center mt-3 text-black-50">enquiries@laxmiiapp.com</div>
-                    <br>       
-                </div> 
+                    <br> -->    
+                <!--</div> 
+                <div class="card-footer link-fancy-light link-fancy text-center">
+                  <div class="small text-center mt-2 pb-2 text-white">enquiries@laxmiiapp.com</div>
+                </div>
             </div>
         </a> 
         </div>
         <div class="col">
           <a target="_blank" href="https://www.instagram.com/laxmiiapp/" style="text-decoration: none;">
-            <div class="card bg-black text-white py-4 h-100">
-                <div class="card-body link-fancy-light link-fancy text-center">
-                    {{ render_icon('instagram', color='primary', size='2em') }}
+            <div class="card bg-black text-white">-->
+            <!--<div class="card bg-black text-white py-4 h-100">-->
+                <!--<div class="card-body">-->
+                <!--<div class="card-body link-fancy-light link-fancy text-center">-->
+                  <!--svg class="bi text-primary" width="2em" height="2em" fill="currentColor"> 
+                    <use xlink:href="/bootstrap/static/icons/bootstrap-icons.svg#instagram"/>
+                  </svg>-->
+                    <!--{{ render_icon('instagram', color='primary', size='2em') }}
                     <div class="small text-center mt-3 text-black-50">Instagram</div>
-                    <br>                       
+                    <br>-->                   
+                <!--</div>
+                <div class="card-footer link-fancy-light link-fancy text-center">
+                  <div class="small text-center mt-2 pb-2 text-white">Instagram</div>
                 </div>  
             </div>
-        </a> 
-        </div>
+          </a> 
+        </div>-->
+
       </div>
     </div>
   </footer>
 
-
-
-
-
-
-
-
-  <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{url_for('static', filename='js/aos.js')}}"></script>
+  <script src="../static/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/aos.js"></script>
   <script>
     AOS.init({
       duration: 500, // values from 0 to 3000, with step 50ms
