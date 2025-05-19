@@ -49,7 +49,6 @@
     }
 
     .active {
-      /* color: chocolate !important; */
       border-bottom: 2px solid white !important;
     }
 
